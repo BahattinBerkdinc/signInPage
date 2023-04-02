@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+:root {
+    --singBg: #fff;
+    --mainBg: linear-gradient(to right, #eaafc8, #654ea3);
+    --inputBg: #654ea3aa;
+    --butonBg: #654ea3;
+}
+
+.container {
+    background: var(--mainBg);
+
+    display: flex;
+    justify-content: center;
+
+    padding: 2rem;
+
+    flex-wrap: wrap;
+
+
+}
+
+.leftSide {
+    flex: 1;
+    background-color: var(--singBg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem;
+
+    border-radius: 15px 0 0 15px;
+}
+
+.container .leftSide .return {
+    align-self: flex-start;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+.container .leftSide .return i {
+    border: 1px solid var(--butonBg);
+    border-radius: 50%;
+    padding: 3px;
+
+    font-size: .5rem;
+
+}
+
+.container .leftSide .return a {
+    text-decoration: none;
+    color: var(--butonBg);
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+
+/* ************************************* */
+
+
+.container .leftSide .form-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: column;
+    margin: 4rem;
+
+    gap: 5rem;
+}
+
+.container .leftSide .form-content form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.container .leftSide .form-content form input {
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.299);
+
+    padding: 15px 5px;
+    color: white;
+
+    font-weight: 200;
+
+    transition: all 300ms ease-in-out;
+
+
+}
+
+.container .leftSide .form-content form input:focus {
+    background-color: var(--inputBg);
+
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+
+.container .leftSide .form-content form input:focus::placeholder {
+    opacity: 0;
+}
+
+
+.container .leftSide button {
+    border: none;
+    outline: none;
+    background-color: var(--butonBg);
+    padding: 15px 60px;
+    border-radius: 15px;
+
+    color: #fff;
+
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: all 500ms ease-in-out;
+}
+
+
+.container .leftSide button:hover {
+    scale: 1.2;
+    color: var(--butonBg);
+    background-color: var(--singBg);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 0px;
+}
+
+
+
+/* ***************************************** */
+
+
+.container .rightSide {
+    flex: 2;
+    background-image: url('../images/login-bg.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    position: relative;
+
+    z-index: 1;
+
+    border-radius: 0 15px 15px 0;
+
+    overflow: hidden;
+
+}
+
+.container .rightSide h2 {
+    color: var(--singBg);
+    font-size: 4rem;
+    font-weight: 300;
+
+    z-index: 3;
+}
+
+
+.container .rightSide p {
+    color: var(--singBg);
+    font-size: 1rem;
+    font-weight: 300;
+
+    z-index: 3;
+}
+
+.container .rightSide::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.495);
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+}
+
+
+@media screen and (max-width:800px) {
+    .container {
+        flex-direction: column;
+
+
+    }
+
+    .container .leftSide {
+        width: 100%;
+        flex: 0;
+        border-radius: 15px;
+    }
+
+    .container .rightSide {
+        width: 100%;
+        border-radius: 15px;
+        margin-top: 2rem;
+    }
+}
